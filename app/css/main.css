@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #fef7e6;
+}
+
+header {
+  background-color: darkred;
+  height: 3rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+.events {
+  background-color: red;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.events ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  animation-name: scrollbar;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scrollbar {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.events ul li {
+  text-decoration: none;
+  white-space: none;
+  right: -100%;
+  text-align: center;
+}
+
+.events ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.clock {
+  height: 15rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clock h2 {
+  color: #fff;
+  font-size: 4rem;
+}
+
+.clock p {
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.cards {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2rem;
+}
+
+.card {
+  width: 15rem;
+  height: 32rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
+  padding: 1rem;
+  transition: all 2s;
+}
+
+.card:hover {
+  scale: 1.1;
+}
+
+.card img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  top: 0;
+  border-radius: 30px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  padding: 0.5rem 0 0 0.5rem;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+}
+
+.card ul,
+.project-details ul {
+  display: flex;
+  list-style: none;
+}
+
+.card ul li,
+.project-details ul li {
+  padding: 0.5rem;
+  background-color: #f7dfa8;
+  border-radius: 20px;
+  margin: 0.5rem 0.5rem;
+}
+
+.socials {
+  background-color: black;
+  height: 5rem;
+}
+
+.socials ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.socials ul li a {
+  color: #fff;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.socials ul li img {
+  width: 20px;
+  height: 20px;
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.project-details {
+  position: fixed;
+  width: 60rem;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  background-color: #fff;
+  padding: 1rem;
+  transition: all 1s;
+}
+
+.project-details.open {
+  right: 0;
+}
+
+.project-details img {
+  height: 50%;
+}
+
+.project-details #btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.project-details h2 {
+  padding: 1rem 0;
+}
